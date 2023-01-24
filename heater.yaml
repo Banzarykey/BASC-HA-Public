@@ -1,0 +1,24 @@
+substitutions:
+  devicename: heater
+  devicename_upper: Heater
+  tempoffset: '-4.5'
+
+esphome:
+  name: $devicename
+  platform: ESP8266
+  board: sonoff_th
+  name_add_mac_suffix: true
+  project:
+    name: esphome.basc-heater
+    version: "1.0"
+improv_serial:
+wifi:
+  ap:
+
+captive_portal:
+
+dashboard_import:
+  package_import_url: github://Banzarykey/BASC-HA-Public/heater.yaml@main
+  import_full_config: true  
+<<: !include .base.yaml
+<<: !include .base.sonoffth16.yaml
