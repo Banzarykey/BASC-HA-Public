@@ -2,6 +2,10 @@ substitutions:
   devicename: heater
   devicename_upper: Heater
   tempoffset: '-4.5'
- 
+esphome:
+  name: $devicename
+  platform: ESP8266
+  board: sonoff_th
+  name_add_mac_suffix: true
 <<: !include .base.yaml
 <<: !include .base.sonoffth16.yaml
